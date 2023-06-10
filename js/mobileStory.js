@@ -1,7 +1,4 @@
 
-
-slideMobile = document.querySelector('#mobileStorys')
-
 class SlideStories {
   constructor(id) {
     this.slide = document.querySelector(`[data-slide="${id}"]`);
@@ -15,7 +12,6 @@ class SlideStories {
     this.thumbItems.forEach(item => item.classList.remove('active-slideThumb'));
     this.thumbItems[index].classList.add('active-slideThumb');
     this.autoSlide();
-
     this.thumbItems.forEach((item, i) => {
       this.thumbItems[index].classList.remove('active-slideThumb-color')
     });
