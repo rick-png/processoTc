@@ -193,8 +193,11 @@ nav > div {
 
 /* Inicio - main*/
 main {
+  height: calc(100vh - 9.81rem);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 #contentStoryUpdates {
   width: 88%;
@@ -215,7 +218,7 @@ main {
   overflow: hidden;
   display: flex;
   grid-gap: 2.4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 }
 #contentStoryUpdates>section>figure {
   width: 30.6rem;
@@ -264,3 +267,63 @@ main {
   background-color: hsla(0, 0%, 93%, 0.8);
   cursor: pointer;
 }
+
+/* Inicio - Botões do slider Storys */
+#buttonStoryUpdates {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+#buttonStoryUpdates>button {
+  width: 6.4rem;
+  height: 4.8rem;
+  display: grid;
+  place-items: center;
+  background: none;
+  border: 2px solid #999;
+  border-radius: 15rem;
+  cursor: pointer;
+}
+#buttonStoryUpdates>button:last-child>img {
+ transform: rotate(180deg);
+}
+/* Fim - Botões do slider Storys */
+
+
+/* Inicio - updates */
+#updates {
+  width: 100%;
+  height: 4.8rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 0.8rem 0.8rem 0rem 0rem;
+  background-color: #eee;
+}
+#containerUpdates {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#containerUpdates>div:first-child {
+  display: flex;
+  gap: 0.4rem;
+  font-size: 1.2rem;
+  line-height: 132%;
+  color: #666;
+}
+#containerUpdates>div:first-child div {
+  display: flex;
+}
+#containerUpdates>div:last-child {
+  font-size: 1.2rem;
+  line-height: 132%;
+  color: #666;
+}
+/* Fim - updates */
+
+
+
+/* Fim - main*/
+
