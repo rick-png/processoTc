@@ -14,5 +14,67 @@
   width: 41.4rem;
   height: 100%;
 
-  background: linear-gradient(#000000a4, url('../assets/imgs/mobileStorys/background.jpg'));
+  background: linear-gradient(#000000a4, #000000a4), url('../assets/imgs/mobileStorys/background.jpg');
+  background-position: bottom;
+}
+
+
+
+.contentMobileStorys {
+  display: grid;
+  grid-template-rows: auto 2.9rem 1fr ;
+
+}
+.slideNav {
+  grid-area: 3/1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.slideItems {
+  grid-area: 3/1;
+  position: relative;
+  display: grid;
+}
+.logoAndExit {
+  grid-area: 2/1;
+}
+.slideThumb {
+  grid-area: 1/1;
+}
+
+
+.slideNav>button{
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  opacity: 0;
+}
+.slideItems > * {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+}
+.active-Stories {
+  opacity: 1;
+  position: relative;
+  pointer-events: initial;
+}
+.slideThumb {
+  display: flex;
+}
+.slideThumb > span {
+  height: 0.3rem;
+  flex: 1;
+  margin: 1.2rem 0rem 0rem 0.4rem;
+  border-radius: 2px;
+  background-color: red;
+}
+.slideThumb > span:first-child {
+  margin-left: 2.4rem;
+}
+.slideThumb > span:last-child {
+  margin-right: 2.4rem;
+}
+.slideThumb > span.active-slideThumb {
+  background-color: blue;
 }
