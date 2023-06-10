@@ -1,0 +1,17 @@
+
+@media screen and (max-width: 800px){
+  #mobileStorys {
+    transform: translateY(-15.9rem);
+  }
+  #topbar {
+    height: 9.3rem;
+  }
+  .contentTopbar {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  main {
+    height: calc(100vh - 15.9rem);
+  }
+}

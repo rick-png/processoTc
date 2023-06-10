@@ -231,9 +231,14 @@ main {
 #contentStoryUpdates>section {
   width: 100%;
   overflow: hidden;
+  scroll-behavior: smooth;
   display: flex;
   grid-gap: 2.4rem;
   margin-bottom: 6rem;
+}
+#contentStoryUpdates>section.cursorOnn {
+  scroll-behavior: auto;
+  cursor: grab;
 }
 #contentStoryUpdates>section>figure {
   width: 30.6rem;
@@ -331,10 +336,11 @@ main {
 #containerUpdates>div:first-child div {
   display: flex;
 }
-#containerUpdates>div:last-child {
+#containerUpdates>div:last-child>a{
   font-size: 1.2rem;
   line-height: 132%;
   color: #666;
+  text-decoration: none;
 }
 /* Fim - updates */
 /* Fim - main*/
