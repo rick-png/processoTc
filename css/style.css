@@ -24,6 +24,7 @@ nav {
 nav > div {
   width: 88%;
   display: flex;
+  line-height: normal;
   justify-content: space-between;
 }
 
@@ -73,7 +74,6 @@ nav > div {
 }
 .contentTopbar>div:nth-child(2)>div >img {
   height: 1.6rem;
-  transform: translateY(-2px);
 }
 
 
@@ -109,9 +109,6 @@ nav > div {
   height: 1.6rem;
   margin-left: 0.2rem;
   background-color: #fff;
-}
-#idioma>div:first-child>img {
-  transform: translateY(-0.2rem);
 }
 #idioma>div:last-child {
   cursor: pointer;
@@ -154,13 +151,27 @@ nav > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.4rem;
   background: none;
   border: 0.20rem solid #ED7D31;
   border-radius: 2.4rem;
   font-size: 1.4rem;
   cursor: pointer;
   padding-left: 1.2rem;
+  position: relative;
+  overflow: hidden;
+  transition: 1s ;
+}
+.storyAndSearch>button:first-child::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 2.4rem;
+  background-color: #ED7D31;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
 }
 .storyAndSearch>button:first-child>p:first-child {
   color: #444;
@@ -169,6 +180,10 @@ nav > div {
   color: #111;
   font-weight: bold;
   text-transform: uppercase;
+}
+.storyAndSearch>button:first-child:hover::after {
+  width: 100%;
+  opacity: 1;
 }
 .storyAndSearch>button:first-child>figure {
   width: 2.6rem;
@@ -322,8 +337,5 @@ main {
   color: #666;
 }
 /* Fim - updates */
-
-
-
 /* Fim - main*/
 

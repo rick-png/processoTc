@@ -1,0 +1,18 @@
+
+#mobileStorys {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+
+  transform: translateY(-9.81rem);
+  background-color: hsla(0, 0%, 0%, 0.9);
+}
+
+.contentMobileStorys {
+  width: 41.4rem;
+  height: 100%;
+
+  background: linear-gradient(#000000a4, url('../assets/imgs/mobileStorys/background.jpg'));
+}
