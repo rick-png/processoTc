@@ -1,4 +1,7 @@
 
+
+slideMobile = document.querySelector('#mobileStorys')
+
 class SlideStories {
   constructor(id) {
     this.slide = document.querySelector(`[data-slide="${id}"]`);
@@ -13,31 +16,31 @@ class SlideStories {
     this.thumbItems[index].classList.add('active-slideThumb');
     this.autoSlide();
 
-    this.thumbItems.forEach((item,i) => {
-        this.thumbItems[index].classList.remove('active-slideThumb-color')
-      
+    this.thumbItems.forEach((item, i) => {
+      this.thumbItems[index].classList.remove('active-slideThumb-color')
     });
-    if(index < this.items.length) {
-      this.thumbItems.forEach((item,i) => {
-        if(index > i) {
+    if (index < this.items.length) {
+      this.thumbItems.forEach((item, i) => {
+        if (index > i) {
           item.classList.add('active-slideThumb-color');
         }
       });
     }
   }
 
+
   prev() {
-    if(this.active > 0) {
+    if (this.active > 0) {
       this.activeSlide(this.active - 1);
     } else {
-      this.activeSlide(this.items.length - 1);
+      this.slide.style.display = 'none'
     }
   }
   next() {
-    if(this.active < this.items.length - 1) {
+    if (this.active < this.items.length - 1) {
       this.activeSlide(this.active + 1);
-    } else {
-      this.activeSlide(0);
+    } else if(this.active >= this.items.length - 1){
+      this.slide.style.display = 'none';
     }
   }
   addNavigation() {
@@ -58,6 +61,24 @@ class SlideStories {
     this.timeout = setTimeout(this.next, 5000);
   }
 
+  
+  oppenSlide() {
+    const bntStories = document.querySelector('#oppenMobileStories')
+    bntStories.addEventListener('click', () => {
+      this.slide.style.display = 'flex';
+      this.autoSlide();
+    })
+    
+  }
+  exitSlide() {
+    const exitStories = document.querySelector('#exitMobileStories')
+    exitStories.addEventListener('click', () => {
+    this.slide.style.display = 'none';
+    clearTimeout(this.timeout);
+    });
+  }
+
+
   init() {
     this.items = this.slide.querySelectorAll('.slideItems > *');
     this.thumb = this.slide.querySelector('.slideThumb');
@@ -66,6 +87,8 @@ class SlideStories {
     this.addThumbItems();
     this.addNavigation();
     this.activeSlide(0);
+    this.oppenSlide()
+    this.exitSlide()
   }
 }
 

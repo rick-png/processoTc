@@ -3,7 +3,7 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
-  display: flex;
+  display: none;
   justify-content: center;
 
   transform: translateY(-9.81rem);
@@ -96,13 +96,13 @@
   justify-content: space-between;
   
 }
-.cointentLogoAndExit>figure:first-child {
+.cointentLogoAndExit>figure {
   height: 100%;
 }
-.cointentLogoAndExit>figure:first-child>img {
+.cointentLogoAndExit>figure>img {
   height: 100%;
 }
-.cointentLogoAndExit>figure:last-child>img {
+.cointentLogoAndExit>button>img {
   height: 1.6rem;
 }
 
