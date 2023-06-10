@@ -9,16 +9,6 @@ html {
   font-size: 62.5%;
 }
 
-:root {
-  --font-white: #fff;
-  --font-white2: #eee;
-  --font-white-opacity: #BBBBBB;
-
-  --border-navbar: #DDDDDD;
-
-  --back-white: #fff;
-}
-
 body {
   font-family: 'inter';
   background-color: #fff;
@@ -45,7 +35,7 @@ nav > div {
 }
 .contentTopbar {
   font-size: 1.2rem;
-  color: var(--font-white);
+  color: #fff;
   align-items: center;
 }
 .contentTopbar div {
@@ -61,9 +51,9 @@ nav > div {
  }
 .contentTopbar>div:first-child>p {
   font-weight: 400;
-  color: var(--font-white-opacity);
+  color: #fff;
   padding-left: 0.6rem;
-  border-left: 1px solid var(--font-white-opacity);
+  border-left: 1px solid #fff;
 }
 .contentTopbar>div:first-child>img {
   width: 1.08rem;
@@ -94,7 +84,7 @@ nav > div {
 
 #acessibilidade {
   gap: 1.2rem;
-  color: var(--font-white2);
+  color: #fff;
 }
 #acessibilidade>div {
   gap: 0.8rem;
@@ -118,7 +108,7 @@ nav > div {
   width: 1px;
   height: 1.6rem;
   margin-left: 0.2rem;
-  background-color: var(--back-white);
+  background-color: #fff;
 }
 #idioma>div:first-child>img {
   transform: translateY(-0.2rem);
@@ -132,8 +122,9 @@ nav > div {
 
 /* Inicio -  propriedades para a navbar*/
 .contentNavbar {
+  align-items: center;
   height: 6.6rem;
- border-bottom: 2px solid var(--border-navbar);
+  border-bottom: 2px solid #DDDDDD;
 }
 .containerLogo {
   display: flex;
@@ -142,4 +133,134 @@ nav > div {
 }
 .containerLogo>img {
   width: 11.2rem;
+}
+.containerLogo>figcaption {
+  font-family: Helvetica;
+  font-size: 0.8rem;
+  line-height: 132%;
+  color: #444;
+  padding-left: 1.2rem;
+  border-left: 2px solid #bbb;
+}
+
+.storyAndSearch {
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+.storyAndSearch>button:first-child {
+  width: 10.3rem;
+  height: 3.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem;
+  background: none;
+  border: 0.20rem solid #ED7D31;
+  border-radius: 2.4rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding-left: 1.2rem;
+}
+.storyAndSearch>button:first-child>p:first-child {
+  color: #444;
+}
+.storyAndSearch>button:first-child>p:nth-child(2) {
+  color: #111;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.storyAndSearch>button:first-child>figure {
+  width: 2.6rem;
+  height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ED7D31;
+}
+
+.storyAndSearch>button:last-child {
+  width: 2rem;
+  height: 2rem;
+  
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+/* Fim -  propriedades para a navbar*/
+
+
+/* Inicio - main*/
+main {
+  display: flex;
+  justify-content: center;
+}
+#contentStoryUpdates {
+  width: 88%;
+
+  display: flex;
+  flex-direction: column;
+}
+#contentStoryUpdates>h2 {
+  font-family: Helvetica;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #111;
+  line-height: 132%;
+  margin-bottom: 1.6rem;
+}
+#contentStoryUpdates>section {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  grid-gap: 2.4rem;
+  margin-bottom: 4rem;
+}
+#contentStoryUpdates>section>figure {
+  width: 30.6rem;
+  height: 35.4rem;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #ddd;
+  position: relative;
+}
+#contentStoryUpdates>section>figure>img {
+  width: 30.6rem;
+  height: 21rem;
+  border-radius: 2px 2px 0px 0px;
+  filter: brightness(78%);
+  object-fit: cover;
+}
+#contentStoryUpdates>section>figure>figcaption {
+  width: 90%;
+  height: calc(100% - 21rem);
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#contentStoryUpdates>section>figure>figcaption>h4 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 150%;
+  color: #111;
+}
+#contentStoryUpdates>section>figure>figcaption>p {
+  font-size: 1.2rem;
+  line-height: 132%;
+  color: #666;
+
+}
+.iconCardStory {
+  position: absolute;
+  top: 1.3rem;
+  right: 0.9rem;
+  width: 3rem;
+  height: 2.8rem;
+  display: grid;
+  place-items: center;
+  border-radius: 15rem;
+  background-color: hsla(0, 0%, 93%, 0.8);
+  cursor: pointer;
 }
