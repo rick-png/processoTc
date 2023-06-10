@@ -25,29 +25,87 @@
   grid-template-rows: auto 2.9rem 1fr ;
 
 }
-.slideNav {
-  grid-area: 3/1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.slideThumb {
+  grid-area: 1/1;
+}
+.logoAndExit {
+  grid-area: 2/1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .slideItems {
   grid-area: 3/1;
   position: relative;
   display: grid;
 }
-.logoAndExit {
-  grid-area: 2/1;
+.slideNav {
+  grid-area: 3/1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
+
+
+
 .slideThumb {
-  grid-area: 1/1;
+  display: flex;
+}
+.slideThumb > span {
+  height: 0.3rem;
+  flex: 1;
+  margin: 1.2rem 0rem 1.6rem 0.4rem;
+  border-radius: 2px;
+  position: relative;
+  background-color: #222;
+}
+.slideThumb > span:first-child {
+  margin-left: 2.4rem;
+}
+.slideThumb > span:last-child {
+  margin-right: 2.4rem;
+}
+.slideThumb > span.active-slideThumb::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #fff;
+  animation: thumb 5s linear ;
+}
+.slideThumb > span.active-slideThumb-color::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #fff;
+}
+@keyframes thumb {
+  to {
+    width: 100%;
+  }
 }
 
-
-.slideNav>button{
-  -webkit-appearance: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  opacity: 0;
+.cointentLogoAndExit {
+  width: 100%;
+  height: 100%;
+  margin: 0rem 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
 }
+.cointentLogoAndExit>figure:first-child {
+  height: 100%;
+}
+.cointentLogoAndExit>figure:first-child>img {
+  height: 100%;
+}
+.cointentLogoAndExit>figure:last-child>img {
+  height: 1.6rem;
+}
+
 .slideItems > * {
   opacity: 0;
   position: absolute;
@@ -59,22 +117,9 @@
   position: relative;
   pointer-events: initial;
 }
-.slideThumb {
-  display: flex;
-}
-.slideThumb > span {
-  height: 0.3rem;
-  flex: 1;
-  margin: 1.2rem 0rem 0rem 0.4rem;
-  border-radius: 2px;
-  background-color: red;
-}
-.slideThumb > span:first-child {
-  margin-left: 2.4rem;
-}
-.slideThumb > span:last-child {
-  margin-right: 2.4rem;
-}
-.slideThumb > span.active-slideThumb {
-  background-color: blue;
+
+.slideNav>button{
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  opacity: 0;
 }
